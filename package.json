@@ -1,0 +1,33 @@
+{
+  "name": "the-social-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "seed": "npm run build && node  dist/utils/seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duzinhoml/the-social-network.git"
+  },
+  "keywords": [],
+  "author": "Mathew Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duzinhoml/the-social-network/issues"
+  },
+  "homepage": "https://github.com/duzinhoml/the-social-network#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.6"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/mongoose": "^5.11.96",
+    "nodemon": "^3.1.9"
+  }
+}
