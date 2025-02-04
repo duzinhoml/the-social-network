@@ -23,7 +23,7 @@ export const getSingleUser = async (req, res) => {
         
             if (!user) {
                 res.status(404).json({ message: 'User not found' });
-            }
+            };
             res.status(200).json(user);
     } 
     catch (err) {
@@ -53,7 +53,7 @@ export const updateUser = async (req, res) => {
 
         if (!updatedUser) {
             res.status(404).json({ message: 'User not found' });
-        }
+        };
         res.status(200).json(updatedUser);
     } 
     catch (err) {
@@ -68,7 +68,7 @@ export const deleteUser = async (req, res) => {
 
         if (!deletedUser) {
             res.status(404).json({ message: 'User not found' });
-        }
+        };
 
         await User.updateMany(
             { friends: req.params.userId },
@@ -103,7 +103,7 @@ export const addFriend = async (req, res) => {
 
         if (!user) {
             res.status(404).json({ message: 'User not found' });
-        }
+        };
 
         res.status(200).send({ message: 'Friend added' });
     } 
@@ -125,7 +125,7 @@ export const removeFriend = async (req, res) => {
 
         if (!user) {
             res.status(404).json({ message: 'User not found' });
-        }
+        };
 
         res.status(200).send({ message: 'Friend removed' });
     } 

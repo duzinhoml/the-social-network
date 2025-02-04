@@ -43,7 +43,7 @@ export const createThought = async (req, res) => {
 
         if (!user) {
             res.status(404).json({ message: 'Thought created but user not found' });
-        }
+        };
         res.status(201).send({ message: 'Thought created' });
     } 
     catch (err) {
@@ -62,7 +62,7 @@ export const updateThought = async (req, res) => {
 
         if (!thought) {
             res.status(404).json({ message: 'Thought not found' });
-        }
+        };
         res.status(200).json(thought);
     } 
     catch (err) {
@@ -77,7 +77,7 @@ export const deleteThought = async (req, res) => {
 
         if (!thought) {
             res.status(404).json({ message: 'Thought not found' });
-        }
+        };
 
         await User.updateMany(
             { thoughts: req.params.thoughtId },
@@ -109,7 +109,7 @@ export const addReaction = async (req, res) => {
 
        if (!reaction) {
            res.status(404).json({ message: 'Thought not found' });
-       }
+       };
        res.status(201).send({ message: 'Reaction added' });
     } 
     catch (err) {
