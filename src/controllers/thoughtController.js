@@ -21,6 +21,7 @@ export const getSingleThought = async (req, res) => {
 
         if (!thought) {
             res.status(404).json({ message: 'Thought not found' });
+            return;
         };
         res.status(200).json(thought);
     } 
@@ -43,6 +44,7 @@ export const createThought = async (req, res) => {
 
         if (!user) {
             res.status(404).json({ message: 'Thought created but user not found' });
+            return;
         };
         res.status(201).send({ message: 'Thought created' });
     } 
@@ -62,6 +64,7 @@ export const updateThought = async (req, res) => {
 
         if (!thought) {
             res.status(404).json({ message: 'Thought not found' });
+            return;
         };
         res.status(200).json(thought);
     } 
