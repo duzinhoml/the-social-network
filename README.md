@@ -26,8 +26,9 @@ The Social Network API is designed to provide backend functionality for a social
 
 ## Usage
 
-Start the server using: `node index.js`  
-Use Insomnia or Postman to test API routes.
+> 1.) Start the server using: `npm run start`
+
+> 2.) Use Insomnia or Postman to test API routes.
 
 ## License
 
